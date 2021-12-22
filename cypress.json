@@ -1,11 +1,21 @@
-{"reporter": "cypress-multi-reporters",
+{
+    "reporter": "cypress-multi-reporters",
     "reporterOptions": {
         "reporterEnabled": "mochawesome",
         "mochawesomeReporterOptions": {
             "reportDir": "cypress/reports/mocha",
+            "embeddedScreenshots": true,
             "quite": true,
             "overwrite": false,
             "html": false,
             "json": true
         }
-    }}
+    },
+    "video": false,
+    "ignoreTestFiles": [
+        "**/integration/1-getting-started/*.js",
+        "**/integration/2-advanced-examples/*.js"
+    ],
+    "screenshotOnRunFailure": true,
+    "screenshotsFolder": "cypress/reports/mochareports/assets"
+}
